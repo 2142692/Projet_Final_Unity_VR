@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class joueur : MonoBehaviour
 {
-
+    
     public Animator ascenseur;
     public Transform groundCheck;
     public float groundDistance;
