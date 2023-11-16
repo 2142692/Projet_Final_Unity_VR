@@ -7,6 +7,7 @@ public class joueur : MonoBehaviour
     
     public Animator ascenseur;
     public Transform groundCheck;
+    public GameObject cube;
     public float groundDistance;
     public LayerMask groundMask;
     private Vector3 velocity;
@@ -27,6 +28,11 @@ public class joueur : MonoBehaviour
         {
             velocity.y = -2f;
         }
+    }
+
+    public void cubeActive()
+    {
+        cube.SetActive(true);
     }
 
 }
