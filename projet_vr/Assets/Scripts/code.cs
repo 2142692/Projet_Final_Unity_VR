@@ -6,7 +6,7 @@ public class code : MonoBehaviour
 {
     public Text Ans;
     public Animator corps;
-
+    public GameObject mur;
     private string Answer = "4213";
 
     public void Number(int number)
@@ -20,6 +20,7 @@ public class code : MonoBehaviour
         {
             Ans.text = "yes";
             corps.Play("folie");
+            mur.SetActive(false);
         }
 
         else
