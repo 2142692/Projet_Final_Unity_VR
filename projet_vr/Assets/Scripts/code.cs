@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 public class code : MonoBehaviour
 {
+    public Animator red;
+    public Animator yellow;
+    public Animator green;
+    public Animator blue;
     public Text Ans;
     public Animator corps;
+    private float btnCliked = 0;
     public GameObject mur;
     private string Answer = "4213";
 
@@ -21,12 +27,42 @@ public class code : MonoBehaviour
             Ans.text = "yes";
             corps.Play("folie");
             mur.SetActive(false);
+            btnCliked = 0;
         }
 
         else
         {
-            Ans.text = "nope";
+            Ans.text = "";
+            btnCliked = 0;
         }
+
+    }
+
+    public void ActivebtnRed()
+    {
+        red.Play("btnRed");
+
+
+    }
+
+    public void ActivebtnYellow()
+    {
+        yellow.Play("btnYellow");
+
+
+    }
+
+    public void ActivebtnGreen()
+    {
+        green.Play("btnGreen");
+
+
+    }
+
+    public void ActivebtnBlue()
+    {
+        blue.Play("btnBlue");
+
 
     }
 
