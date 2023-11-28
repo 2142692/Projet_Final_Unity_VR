@@ -8,6 +8,7 @@ TagManager:
   - ascenseur
   - crochet
   - Boulon
+  - manivelle
   layers:
   - Default
   - TransparentFX
