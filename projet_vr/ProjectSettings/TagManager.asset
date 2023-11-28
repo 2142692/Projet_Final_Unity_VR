@@ -9,6 +9,7 @@ TagManager:
   - crochet
   - Boulon
   - manivelle
+  - teleport
   layers:
   - Default
   - TransparentFX
