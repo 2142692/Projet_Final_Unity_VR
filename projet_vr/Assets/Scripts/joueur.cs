@@ -19,7 +19,7 @@ public class joueur : MonoBehaviour
     {
         if(other.tag == "ascenseur")
         {
-            ascenseur.Play("monter");
+            ascenseur.Play("monte");
         }
       
     }
