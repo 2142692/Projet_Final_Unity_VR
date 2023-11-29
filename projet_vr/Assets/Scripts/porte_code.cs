@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class porte_code : MonoBehaviour
 {
+    
     public Text Ans;
     public Animator armoire;
     
-    private string Answer = "1750";
+    private string Answer = "1751";
 
     public void Number(int number)
     {

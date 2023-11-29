@@ -10,6 +10,7 @@ TagManager:
   - Boulon
   - manivelle
   - teleport
+  - poto
   layers:
   - Default
   - TransparentFX
