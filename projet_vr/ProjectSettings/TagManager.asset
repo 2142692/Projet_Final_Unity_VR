@@ -12,6 +12,7 @@ TagManager:
   - teleport
   - poto
   - puit
+  - sceneFive
   layers:
   - Default
   - TransparentFX
