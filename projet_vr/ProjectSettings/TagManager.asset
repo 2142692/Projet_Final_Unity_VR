@@ -11,6 +11,7 @@ TagManager:
   - manivelle
   - teleport
   - poto
+  - puit
   layers:
   - Default
   - TransparentFX
