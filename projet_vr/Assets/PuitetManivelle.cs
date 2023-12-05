@@ -5,6 +5,7 @@ using UnityEngine;
 public class PuitetManivelle : MonoBehaviour
 {
     public Animator ManivelleAnim;
+    public Animator grille;
     public GameObject manivelleDisp;
     public GameObject manivelleApp;
 
@@ -17,8 +18,11 @@ public class PuitetManivelle : MonoBehaviour
                 manivelleApp.SetActive(true);
                 ManivelleAnim.Play("manTourne");
                 manivelleDisp.SetActive(false);
+                grille.Play("grille2");
+
             }
            
         }
     }
+    
 }
