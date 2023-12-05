@@ -14,14 +14,26 @@ public class joueur : MonoBehaviour
     public LayerMask groundMask;
     private Vector3 velocity;
     private bool isGrounded;
-    bool isPressed;
+    public GameObject plateforme;
+    public GameObject player;
+    public GameObject empty;
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "ascenseur")
         {
+            player.transform.parent = plateforme.transform;
             ascenseur.Play("monte");
         }
       
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "ascenseur")
+        {
+            player.transform.parent = empty.transform;
+        }
+
     }
 
     void Update()
