@@ -10,7 +10,7 @@ public class porte_code : MonoBehaviour
     public Text Ans;
     public Animator armoire;
     
-    private string Answer = "1234";
+    private string Answer = "7151";
 
     public void Number(int number)
     {
