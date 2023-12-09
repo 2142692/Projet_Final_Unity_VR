@@ -4,6 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 public class couleur_code : MonoBehaviour
 {
+   
+    public GameObject scan;
+    public Animator empreinte;
+    public Animator danger;
+    public Animator securite;
+    public Animator AmpouleOne;
+    public Animator AmpouleTwo;
+    public Animator AlarmeOne;
+    public Animator AlarmeTwo;
     public Animator btnRed;
     public Animator btnYellow;
     public Animator btnGreen;
@@ -30,6 +39,12 @@ public class couleur_code : MonoBehaviour
             mainOneErreur.Play("mainFirst");
             mainTwoErreur.Play("mainTwo");
             porteFutur.Play("porteFutur");
+            AmpouleOne.Play("ampouleOne");
+            AmpouleTwo.Play("ampouleTwo");
+            AlarmeOne.Play("alarmeOne");
+            AlarmeTwo.Play("alarmeTwo");
+            securite.Play("fenetreSecurite");
+            scan.SetActive(false);
 
         }
 
@@ -72,6 +87,14 @@ public class couleur_code : MonoBehaviour
     public void ActivatebtnGrey()
     {
         btnGrey.Play("boutonGris");
+
+
+    }
+
+    public void ActivateEmpreinte()
+    {
+        empreinte.Play("empreinte");
+        danger.Play("danger");
 
 
     }

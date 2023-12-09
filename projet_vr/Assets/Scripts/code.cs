@@ -11,7 +11,7 @@ public class code : MonoBehaviour
     public Animator blue;
     public Text Ans;
     public Animator corps;
-    private float btnCliked = 0;
+    
     public GameObject mur;
     private string Answer = "4213";
 
@@ -27,13 +27,13 @@ public class code : MonoBehaviour
             Ans.text = "yes";
             corps.Play("folie");
             mur.SetActive(false);
-            btnCliked = 0;
+            
         }
 
         else
         {
             Ans.text = "";
-            btnCliked = 0;
+            
         }
 
     }
