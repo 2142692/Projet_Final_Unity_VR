@@ -837,10 +837,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ascenseur: {fileID: 1928394130}
-  Sphere: {fileID: 1432760923}
-  indice: {fileID: 176908506}
-  interfaceOpen: {fileID: 613579908}
-  interfaceFermer: {fileID: 613579908}
   groundCheck: {fileID: 1221342350}
   cube: {fileID: 0}
   groundDistance: 0
@@ -862,6 +858,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5439a06aea33e4296954c325205002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sphere: {fileID: 1432760923}
+  indice: {fileID: 176908506}
+  interfaceOpen: {fileID: 613579908}
   canvas: {fileID: 5919137}
 --- !u!1001 &102062744
 PrefabInstance:

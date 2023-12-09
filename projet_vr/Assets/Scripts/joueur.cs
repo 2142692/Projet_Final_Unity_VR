@@ -7,10 +7,7 @@ public class joueur : MonoBehaviour
 {
     
     public Animator ascenseur;
-    public Animator Sphere;
-    public Animator indice;
-    public Animator interfaceOpen;
-    public Animator interfaceFermer;
+    
     public Transform groundCheck;
     public GameObject cube;
     public float groundDistance;
@@ -28,17 +25,7 @@ public class joueur : MonoBehaviour
             ascenseur.Play("monte");
         }
 
-        if (other.tag == "tavleau")
-        {
-            
-            Sphere.Play("sphere");
-            indice.Play("indice");
-        }
-
-        if (other.tag == "interface")
-        {
-            interfaceOpen.Play("interfaceOpen");
-        }
+        
 
     }
 
@@ -47,19 +34,6 @@ public class joueur : MonoBehaviour
         if (other.tag == "ascenseur")
         {
             player.transform.parent = empty.transform;
-        }
-
-        if (other.tag == "tavleau")
-        {
-            
-            Sphere.Play("sphereFerme");
-            indice.Play("indiceFerme");
-            
-        }
-
-        if (other.tag == "interface")
-        {
-            interfaceOpen.Play("interfaceFermer");
         }
 
     }
