@@ -13,6 +13,8 @@ TagManager:
   - poto
   - puit
   - sceneFive
+  - tavleau
+  - interface
   layers:
   - Default
   - TransparentFX

@@ -3,7 +3,27 @@ guid: 3d3b451451ded3841a554e97c0a2bda5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CosmicalLiquid
+    second: {fileID: 2100000, guid: 5b2a622db8de18744847aa321b4cecbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Liquid
+    second: {fileID: 2100000, guid: 66970cc7b0620fb40bdd2541ed7edac2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalDark
+    second: {fileID: 2100000, guid: d8c76d4c52471134db96af0199ec474d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plasma
+    second: {fileID: 2100000, guid: a119c216dba128245bb39399201c2c95, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
