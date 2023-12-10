@@ -10,10 +10,12 @@ public class GestionCodeOrdi : MonoBehaviour
     public Material nouvelleTextureRate; // La nouvelle texture à appliquer en cas d'échec
     public Material nouvelleTextureReussi; // La nouvelle texture à appliquer en cas de réussite
     public GameObject objetAChangerTexture; // L'objet dont vous voulez changer la texture
-
+    
     private string codeEnCours = ""; // Le code en cours de saisie
     private Material materialInitial; // Pour stocker la texture initiale
 
+    public GameObject[] ActivateMenuScreen;
+    public GameObject[] DeactivateMenuScreen;
     void Start()
     {
         // Sauvegarde la texture initiale de l'objet
@@ -42,7 +44,16 @@ public class GestionCodeOrdi : MonoBehaviour
         {
             Debug.Log("Réussi ! Le code est correct.");
 
-            StartCoroutine(ChangerTexturePendantDureeReussi(nouvelleTextureReussi, 2f)); // Ajout du point-virgule ici
+            foreach (GameObject obj in ActivateMenuScreen)
+            {
+                obj.SetActive(true);
+            }
+
+            // Désactiver les objets
+            foreach (GameObject obj in DeactivateMenuScreen)
+            {
+                obj.SetActive(false);
+            }
         }
         else
         {
@@ -66,15 +77,5 @@ public class GestionCodeOrdi : MonoBehaviour
         objetAChangerTexture.GetComponent<Renderer>().material = materialInitial;
     }
 
-    private IEnumerator ChangerTexturePendantDureeReussi(Material nouvelleTextureReussi, float duree)
-    {
-        // Change la texture de l'objet
-        objetAChangerTexture.GetComponent<Renderer>().material = nouvelleTextureReussi;
-
-        // Attend le délai spécifié
-        yield return new WaitForSeconds(duree);
-
-        // Remet la texture initiale après le délai
-        objetAChangerTexture.GetComponent<Renderer>().material = materialInitial;
-    }
+    
 }
