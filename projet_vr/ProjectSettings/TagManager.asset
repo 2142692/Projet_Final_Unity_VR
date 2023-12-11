@@ -15,6 +15,7 @@ TagManager:
   - sceneFive
   - tavleau
   - interface
+  - StageTree
   layers:
   - Default
   - TransparentFX
