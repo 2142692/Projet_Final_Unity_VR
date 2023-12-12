@@ -5,15 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/OutdoorsScene.unity
-    guid: 8124e5870f4fd4c779e7a5f994e84ad1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Stage4.unity
     guid: e9ba1c2e5dabff841aa708a4f05ed696
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Stage5.unity
     guid: d67ebde1964874946807a9f8eda64603
+  - enabled: 0
+    path: Assets/Scene/Stage3.unity
+    guid: cbac0b1d57139c1439495fcb620de44e
+  - enabled: 0
+    path: Assets/Scene/Stage2.unity
+    guid: 9b792f528fd342c47863323e02bbdcaf
+  - enabled: 1
+    path: Assets/Scene/Stage1.unity
+    guid: d45d38709ed713b418f4900d4a92d5e1
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3bc48a06262e85c498ca57e3a2dae893,
       type: 2}
