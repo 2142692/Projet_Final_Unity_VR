@@ -7,7 +7,7 @@ public class AscenseurStage3 : MonoBehaviour
     public Animator ascenseur3;
     public Animator ascenseur3Second;
 
-    // Fonction pour arrêter l'animation à la fin
+    //ANIMATION DE LA PORTE ACSENSEUR
     
 
     public void OnTriggerEnter(Collider collision)

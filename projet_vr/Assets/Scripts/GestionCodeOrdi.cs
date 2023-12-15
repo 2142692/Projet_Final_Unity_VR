@@ -5,20 +5,20 @@ using UnityEngine;
 
 public class GestionCodeOrdi : MonoBehaviour
 {
-    public string codeSouhaite = "8142"; // Le code à deviner
-    public TextMeshPro affichageCode; // Le texte où le code est affiché
-    public Material nouvelleTextureRate; // La nouvelle texture à appliquer en cas d'échec
-    public Material nouvelleTextureReussi; // La nouvelle texture à appliquer en cas de réussite
-    public GameObject objetAChangerTexture; // L'objet dont vous voulez changer la texture
+    public string codeSouhaite = "8142"; // Le code
+    public TextMeshPro affichageCode; 
+    public Material nouvelleTextureRate; 
+    public Material nouvelleTextureReussi; 
+    public GameObject objetAChangerTexture; 
     
-    private string codeEnCours = ""; // Le code en cours de saisie
-    private Material materialInitial; // Pour stocker la texture initiale
+    private string codeEnCours = ""; 
+    private Material materialInitial; 
 
     public GameObject[] ActivateMenuScreen;
     public GameObject[] DeactivateMenuScreen;
     void Start()
     {
-        // Sauvegarde la texture initiale de l'objet
+        
         materialInitial = objetAChangerTexture.GetComponent<Renderer>().material;
     }
 
@@ -59,7 +59,7 @@ public class GestionCodeOrdi : MonoBehaviour
         {
             Debug.Log("Raté. Réessayez.");
 
-            // Lance la coroutine pour changer la texture et la remettre à l'initiale après un délai
+            
             StartCoroutine(ChangerTexturePendantDuree(nouvelleTextureRate, 2f));
             codeEnCours = "";
         }
@@ -67,13 +67,13 @@ public class GestionCodeOrdi : MonoBehaviour
 
     private IEnumerator ChangerTexturePendantDuree(Material nouvelleTextureRate, float duree)
     {
-        // Change la texture de l'objet
+        // texture anim
         objetAChangerTexture.GetComponent<Renderer>().material = nouvelleTextureRate;
 
-        // Attend le délai spécifié
+        
         yield return new WaitForSeconds(duree);
 
-        // Remet la texture initiale après le délai
+        
         objetAChangerTexture.GetComponent<Renderer>().material = materialInitial;
     }
 
