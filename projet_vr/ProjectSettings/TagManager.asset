@@ -17,6 +17,10 @@ TagManager:
   - interface
   - StageTree
   - nextToThree
+  - PlayerController
+  - MainVR
+  - scenefourth
+  - scenetwo
   layers:
   - Default
   - TransparentFX
