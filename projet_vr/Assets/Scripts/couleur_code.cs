@@ -6,6 +6,14 @@ public class couleur_code : MonoBehaviour
 {
    
     public GameObject scan;
+    public GameObject audioScan;
+    public GameObject audiotele;
+    public GameObject audiobtn;
+    public GameObject audioAlarmeOne;
+    public GameObject audioAlarmeTwo;
+    public GameObject audioPorteMetal;
+    public GameObject audioFenetre;
+    public GameObject audioRobot;
     public Animator empreinte;
     public Animator danger;
     public Animator securite;
@@ -45,7 +53,11 @@ public class couleur_code : MonoBehaviour
             AlarmeTwo.Play("alarmeTwo");
             securite.Play("fenetreSecurite");
             scan.SetActive(false);
-
+            audioAlarmeOne.SetActive(true);
+            audioAlarmeTwo.SetActive(true);
+            audioPorteMetal.SetActive(true);
+            audioRobot.SetActive(true);
+            audioFenetre.SetActive(true);
         }
 
         else
@@ -59,35 +71,39 @@ public class couleur_code : MonoBehaviour
     public void ActivatebtnRed()
     {
         btnRed.Play("boutonRouge");
-
-
+        audiobtn.SetActive(false);
+        audiobtn.SetActive(true);
     }
 
     public void ActivatebtnYellow()
     {
         btnYellow.Play("boutonJaune");
-
+        audiobtn.SetActive(false);
+        audiobtn.SetActive(true);
 
     }
 
     public void ActivatebtnGreen()
     {
         btnGreen.Play("boutonVert");
-
+        audiobtn.SetActive(false);
+        audiobtn.SetActive(true);
 
     }
 
     public void ActivatebtnBlue()
     {
         btnBlue.Play("boutonBleu");
-
+        audiobtn.SetActive(false);
+        audiobtn.SetActive(true);
 
     }
 
     public void ActivatebtnGrey()
     {
         btnGrey.Play("boutonGris");
-
+        audiobtn.SetActive(false);
+        audiobtn.SetActive(true);
 
     }
 
@@ -95,7 +111,9 @@ public class couleur_code : MonoBehaviour
     {
         empreinte.Play("empreinte");
         danger.Play("danger");
-
+        audioScan.SetActive(false);
+        audioScan.SetActive(true);
+        audiotele.SetActive(true);
 
     }
 

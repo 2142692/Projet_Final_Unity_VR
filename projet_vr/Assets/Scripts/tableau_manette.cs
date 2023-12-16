@@ -9,6 +9,9 @@ public class tableau_manette : MonoBehaviour
     public Animator levierManette;
     public Text Reponse;
     public GameObject plane;
+    public GameObject AudioManette;
+    public GameObject AudioLevier;
+    public GameObject AudioCarree;
     public Animator diffusion;
     private string Answer = "12";
     public void Number(int number)
@@ -34,22 +37,23 @@ public class tableau_manette : MonoBehaviour
     public void ActivateSwitch()
     {
         switchManette.Play("switch");
-
-
+        AudioManette.SetActive(false);
+        AudioManette.SetActive(true);
     }
 
     public void ActivatebtnCarre()
     {
         btnCarre.Play("btnCarre");
-
+        AudioCarree.SetActive(false);
+        AudioCarree.SetActive(true);
 
     }
 
     public void ActivateLevier()
     {
         levierManette.Play("levierAnim");
-
-
+        AudioLevier.SetActive(false);
+        AudioLevier.SetActive(true);
     }
 
 }

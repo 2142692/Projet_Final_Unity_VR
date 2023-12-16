@@ -7,7 +7,10 @@ public class ChangeSceneFive : MonoBehaviour
     public Animator Sphere;
     public Animator indice;
     public Animator interfaceOpen;
-    
+    public GameObject AudioInterOuvert;
+    public GameObject AudioInterFermer;
+    public GameObject AudioCouleurFerme;
+    public GameObject AudioCouleurOuvre;
     public Animator canvas;
     private void OnTriggerEnter(Collider other)
     {
@@ -23,11 +26,15 @@ public class ChangeSceneFive : MonoBehaviour
 
             Sphere.Play("sphere");
             indice.Play("indice");
+            AudioInterFermer.SetActive(false);
+            AudioInterOuvert.SetActive(true);
         }
 
         if (other.tag == "interface")
         {
             interfaceOpen.Play("interfaceOpen");
+            AudioCouleurFerme.SetActive(false);
+            AudioCouleurOuvre.SetActive(true);
         }
 
     }
@@ -39,12 +46,15 @@ public class ChangeSceneFive : MonoBehaviour
 
             Sphere.Play("sphereFerme");
             indice.Play("indiceFerme");
-
+            AudioInterOuvert.SetActive(false);
+            AudioInterFermer.SetActive(true);
         }
 
         if (other.tag == "interface")
         {
             interfaceOpen.Play("interfaceFermer");
+            AudioCouleurOuvre.SetActive(false);
+            AudioCouleurFerme.SetActive(true);
         }
     }
 
