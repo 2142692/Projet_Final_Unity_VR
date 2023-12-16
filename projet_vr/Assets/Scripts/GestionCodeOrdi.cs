@@ -9,14 +9,16 @@ public class GestionCodeOrdi : MonoBehaviour
     public TextMeshPro affichageCode; 
     public Material nouvelleTextureRate; 
     public Material nouvelleTextureReussi; 
-    public GameObject objetAChangerTexture; 
-    
+    public GameObject objetAChangerTexture;
+    public AudioClip audioClip;
+    public AudioClip audioClipRate;
+
     private string codeEnCours = ""; 
     private Material materialInitial; 
 
     public GameObject[] ActivateMenuScreen;
     public GameObject[] DeactivateMenuScreen;
-    void Start()
+ void Start()
     {
         
         materialInitial = objetAChangerTexture.GetComponent<Renderer>().material;
@@ -43,6 +45,11 @@ public class GestionCodeOrdi : MonoBehaviour
         if (codeEnCours == codeSouhaite)
         {
             Debug.Log("Réussi ! Le code est correct.");
+            GameObject audioObject = new GameObject("AudioObject"); // Audiosource de réussi
+            AudioSource audioSource = audioObject.AddComponent<AudioSource>();
+            audioSource.PlayOneShot(audioClip); 
+            Destroy(audioObject, audioClip.length); //Pense pas que ce soit nécessaire mais j'ai copier collé de rate pis sa marche alors je préfères pas y toucher
+
 
             foreach (GameObject obj in ActivateMenuScreen)
             {
@@ -58,8 +65,12 @@ public class GestionCodeOrdi : MonoBehaviour
         else
         {
             Debug.Log("Raté. Réessayez.");
+            GameObject audioObject = new GameObject("AudioObject"); // recrée GameObject pour l'audioObject
+            AudioSource audioSource = audioObject.AddComponent<AudioSource>();
+            audioSource.PlayOneShot(audioClipRate); 
+            Destroy(audioObject, audioClipRate.length); //Detruit pour laisser la chance de le rejouer si le code est encore raté
 
-            
+
             StartCoroutine(ChangerTexturePendantDuree(nouvelleTextureRate, 2f));
             codeEnCours = "";
         }

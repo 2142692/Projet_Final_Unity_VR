@@ -7,7 +7,7 @@ public class ColorfulDrink : MonoBehaviour
 {
     public GameObject[] Superposition;
     
-    private int index = 0; // Index pour parcourir les états de la superposition
+    private int index = 0; // superposition (Trop complex)
 
     void OnMouseDown()
     {
