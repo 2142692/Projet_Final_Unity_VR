@@ -16,6 +16,7 @@ TagManager:
   - tavleau
   - interface
   - StageTree
+  - nextToThree
   layers:
   - Default
   - TransparentFX

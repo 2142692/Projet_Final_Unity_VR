@@ -9,6 +9,8 @@ public class active_engrenage : MonoBehaviour
     public Animator mecanismeone;
     public Animator mecanismegrand;
     public Animator mecanismemoyen;
+    public GameObject audioPorte;
+    public GameObject audioEngrenage;
    public void Hover()
     {
             mecanismeone.Play("mecanismeOne");
@@ -16,5 +18,7 @@ public class active_engrenage : MonoBehaviour
             mecanismemoyen.Play("mecanismeMoyen");
             porte.Play("porteopen");
         portedeux.Play("porteopenTwo");
+        audioPorte.SetActive(true);
+        audioEngrenage.SetActive(true);
     }
 }
