@@ -8,7 +8,7 @@ public class Stage3Script1 : MonoBehaviour
     public int valeurChiffre = 1; // Modifier la valeur pour correspondre au chiffre à ajouter
     public GestionCodeOrdi gestionCode; // Référence au script de gestion du code
 
-    void OnMouseDown()
+    public void Execute()
     {
         gestionCode.AjouterChiffre(valeurChiffre); // Appel de la méthode AjouterChiffre() du script GestionCode
     }

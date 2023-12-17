@@ -5,25 +5,25 @@ using UnityEngine;
 public class GestionOrdinateur : MonoBehaviour
 {
     public Camera vueJoueur; // La caméra de la vue du joueur
-    public Camera vueOrdinateur; // La caméra pour la vue de l'ordinateur
+    
 
     void Start()
     {
         // Assurez-vous que la caméra de l'ordinateur est désactivée au début
-        vueOrdinateur.enabled = false;
+       
     }
 
-    void OnMouseDown()
+    private void OnTriggerEnter(Collider other)
     {
         // Lorsque l'ordinateur est cliqué, active la vue de l'ordinateur
+        if(other.tag == "Player")
         ActiverVueOrdinateur();
     }
 
     public void ActiverVueOrdinateur()
     {
         // Désactive la caméra du joueur et active la caméra de l'ordinateur
-        vueJoueur.enabled = false;
-        vueOrdinateur.enabled = true;
+       
 
         // Verrouille l'orientation du joueur (désactive les contrôles de mouvement ou de regard)
         // Assurez-vous d'avoir un script qui contrôle cela pour éviter le glitching des mains
@@ -34,9 +34,7 @@ public class GestionOrdinateur : MonoBehaviour
     public void RetourVueJoueur()
     {
         // Active la caméra du joueur et désactive la caméra de l'ordinateur
-        vueJoueur.enabled = true;
-        vueOrdinateur.enabled = false;
-
+       
         // Réactive les contrôles de mouvement et de regard du joueur
         // Assurez-vous d'avoir un script qui gère cela pour revenir à la perspective normale du joueur
         // par exemple : réactivation des contrôles de mouvement ou de regard

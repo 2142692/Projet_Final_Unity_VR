@@ -18,7 +18,7 @@ public class ChangeSceneFive : MonoBehaviour
 
        if (other.tag == "sceneFive") 
         {
-            StartCoroutine("chargerNiveau");
+            SceneManager.LoadScene("Stage5");
         }
 
         if (other.tag == "tavleau")
@@ -57,12 +57,12 @@ public class ChangeSceneFive : MonoBehaviour
             AudioCouleurFerme.SetActive(true);
         }
     }
-
-    IEnumerator chargerNiveau()
+   
+   /* IEnumerator chargerNiveau()
     {
         canvas.SetTrigger("Debut");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("Stage5");
         yield break;
-    }
+    }*/
 }
