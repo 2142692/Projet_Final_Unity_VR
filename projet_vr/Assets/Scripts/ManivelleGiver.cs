@@ -5,7 +5,7 @@ using UnityEngine;
 public class ManivelleGiver : MonoBehaviour
 {
     public Animator Chest;
-    public AudioClip audioClip; // Votre AudioClip
+    public AudioClip audioClip; 
 
     public void OnTriggerEnter(Collider collision)
     {
@@ -13,13 +13,13 @@ public class ManivelleGiver : MonoBehaviour
         {
             Chest.Play("coffret");
 
-            GameObject audioObject = new GameObject("AudioObject"); // Crée un GameObject pour l'AudioSource
-            AudioSource audioSource = audioObject.AddComponent<AudioSource>(); // Ajoute un AudioSource au GameObject
+            GameObject audioObject = new GameObject("AudioObject"); 
+            AudioSource audioSource = audioObject.AddComponent<AudioSource>(); 
 
             if (audioClip != null)
             {
-                audioSource.PlayOneShot(audioClip); // Joue l'AudioClip une seule fois
-                Destroy(audioObject, audioClip.length); // Détruit le GameObject après la durée de l'AudioClip pour libérer les ressources
+                audioSource.PlayOneShot(audioClip); 
+                Destroy(audioObject, audioClip.length); 
             }
             else
             {

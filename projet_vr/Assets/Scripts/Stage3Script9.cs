@@ -1,14 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Stage3Script9 : MonoBehaviour
 {
-    public int valeurChiffre = 9; // Modifier la valeur pour correspondre au chiffre à ajouter
-    public GestionCodeOrdi gestionCode; // Référence au script de gestion du code
+    public int valeurChiffre = 9;
+    public GestionCodeOrdi gestionCode; 
 
-    void OnMouseDown()
+    
+    public void ActionAPartirDuBoutonUI()
     {
-        gestionCode.AjouterChiffre(valeurChiffre); // Appel de la méthode AjouterChiffre() du script GestionCode
+       
+
+        if (gestionCode != null)
+        {
+            
+
+
+            gestionCode.AjouterChiffre(valeurChiffre);
+        }
+        else
+        {
+            Debug.LogError("Script GestionCodeOrdi non assigné !");
+        }
     }
 }

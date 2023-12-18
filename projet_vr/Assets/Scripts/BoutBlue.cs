@@ -6,11 +6,11 @@ using TMPro;
 
 public class BoutBlue : MonoBehaviour
 {
-    public int valeurChiffre = 6; // Modifier la valeur pour correspondre au chiffre à ajouter
-    public GestionCode gestionCode; // Référence au script de gestion du code
+    public int valeurChiffre = 6; 
+    public GestionCode gestionCode;
 
-    void OnMouseDown()
+    public void AjouterChiffre()
     {
-        gestionCode.AjouterChiffre(valeurChiffre); // Appel de la méthode AjouterChiffre() du script GestionCode
+        gestionCode.AjouterChiffre(valeurChiffre);
     }
 }

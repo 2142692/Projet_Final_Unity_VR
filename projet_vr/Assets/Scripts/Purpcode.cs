@@ -6,10 +6,10 @@ using TMPro;
 public class Purpcode : MonoBehaviour
 {
     public int valeurChiffre = 2; // Modifier la valeur pour correspondre au chiffre à ajouter
-    public GestionCode gestionCode; // Référence au script de gestion du code
+    public GestionCode gestionCode;
 
-    void OnMouseDown()
+    public void AjouterChiffre()
     {
-        gestionCode.AjouterChiffre(valeurChiffre); // Appel de la méthode AjouterChiffre() du script GestionCode
+        gestionCode.AjouterChiffre(valeurChiffre);
     }
 }
