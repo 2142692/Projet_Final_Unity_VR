@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class joueur : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class joueur : MonoBehaviour
         {
             player.transform.parent = plateforme.transform;
             ascenseur.Play("monte");
+            ascenseur.Play("plateformeTwo");
         }
 
         
@@ -38,8 +40,6 @@ public class joueur : MonoBehaviour
 
     }
 
-    
-
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -47,8 +47,6 @@ public class joueur : MonoBehaviour
         {
             velocity.y = -2f;
         }
+
     }
-
-   
-
 }

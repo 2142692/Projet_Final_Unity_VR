@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0657f8245baf37c4ba8088a8efcb6f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ascenseur: {fileID: 1061593843}
+  ascenseur: {fileID: 1928394130}
   groundCheck: {fileID: 1221342350}
   cube: {fileID: 0}
   groundDistance: 0
@@ -2020,11 +2020,11 @@ Transform:
   m_GameObject: {fileID: 425884953}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 62.72508, y: 144.1, z: -128.6751}
-  m_LocalScale: {x: 5.0071087, y: 0.35900864, z: 5.087184}
+  m_LocalPosition: {x: 0.69347763, y: 5.1100006, z: -5.086815}
+  m_LocalScale: {x: 3.5533447, y: 0.35900864, z: 3.644616}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1928394129}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &425884955
 BoxCollider:
@@ -2109,6 +2109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: XR Device Simulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5934,7 +5939,6 @@ GameObject:
   - component: {fileID: 1061593846}
   - component: {fileID: 1061593845}
   - component: {fileID: 1061593844}
-  - component: {fileID: 1061593843}
   m_Layer: 0
   m_Name: ascenseur
   m_TagString: Untagged
@@ -5942,27 +5946,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1061593843
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061593842}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 309a8118babf0c54989dd3d8393896db, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!65 &1061593844
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12732,6 +12715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1928394129}
+  - component: {fileID: 1928394130}
   m_Layer: 0
   m_Name: Ascenseur
   m_TagString: Untagged
@@ -12748,15 +12732,35 @@ Transform:
   m_GameObject: {fileID: 1928394128}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.82, y: -138.99, z: 87.1}
+  m_LocalPosition: {x: -43.82, y: -138.78, z: 87.1}
   m_LocalScale: {x: 0.70966, y: 1, z: 0.7164309}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 425884954}
   - {fileID: 1169300046}
   - {fileID: 1061593847}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1928394130
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928394128}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a80cda939e9131438b5e70266bbbb00, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1933421557
 GameObject:
   m_ObjectHideFlags: 0
@@ -13998,17 +14002,17 @@ PrefabInstance:
     - target: {fileID: 4956435675015774462, guid: 6ff970eb891890c4290110980b2acd68,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.950891
+      value: 1.5918154
       objectReference: {fileID: 0}
     - target: {fileID: 4956435675015774462, guid: 6ff970eb891890c4290110980b2acd68,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.950891
+      value: 1.5918154
       objectReference: {fileID: 0}
     - target: {fileID: 4956435675015774462, guid: 6ff970eb891890c4290110980b2acd68,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.950891
+      value: 1.5918154
       objectReference: {fileID: 0}
     - target: {fileID: 4956435675015774462, guid: 6ff970eb891890c4290110980b2acd68,
         type: 3}
@@ -14018,7 +14022,7 @@ PrefabInstance:
     - target: {fileID: 4956435675015774462, guid: 6ff970eb891890c4290110980b2acd68,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.94
+      value: -0.83852
       objectReference: {fileID: 0}
     - target: {fileID: 4956435675015774462, guid: 6ff970eb891890c4290110980b2acd68,
         type: 3}
@@ -14822,6 +14826,7 @@ SceneRoots:
   - {fileID: 2107917533}
   - {fileID: 1097540934}
   - {fileID: 1494411584}
+  - {fileID: 425884954}
   - {fileID: 1928394129}
   - {fileID: 576188529}
   - {fileID: 1387267743}
