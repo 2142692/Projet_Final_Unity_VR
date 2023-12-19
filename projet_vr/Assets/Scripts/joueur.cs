@@ -25,6 +25,8 @@ public class joueur : MonoBehaviour
             player.transform.parent = plateforme.transform;
             ascenseur.Play("monte");
             ascenseur.Play("plateformeTwo");
+            ascenseur.Play("plateformeOne");
+            ascenseur.Play("plateformeFour");
         }
 
         

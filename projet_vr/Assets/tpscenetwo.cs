@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class tpscenefourt : MonoBehaviour
 {
+    public Animator canvas;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +17,7 @@ public class tpscenefourt : MonoBehaviour
     } 
     IEnumerator chargerNiveausup()
     {
+        canvas.SetTrigger("Debut");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("Stage2");
         yield break;

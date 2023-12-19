@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class declancheAnimStage3Monte : MonoBehaviour
 {
-    public Animator animator; 
-
+    public Animator animator;
+    public Animator canvas;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ascenseur")) 
@@ -23,6 +23,7 @@ public class declancheAnimStage3Monte : MonoBehaviour
     }
     IEnumerator chargerNiveausup()
     {
+        canvas.SetTrigger("Debut");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("Stage4");
         yield break;

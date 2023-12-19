@@ -1,24 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class startMenu : MonoBehaviour
+public class RetourMenu : MonoBehaviour
 {
-    
-    public void OnPress()
+    public Animator canvas;
+    public void BtnMenu()
     {
-        StartCoroutine("chargerNiveau");
+        StartCoroutine("Retour");
     }
 
 
-    IEnumerator chargerNiveau()
+    IEnumerator Retour()
     {
+        canvas.SetTrigger("Debut");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Stage2");
+        SceneManager.LoadScene("Menu");
         yield break;
     }
 
-  
 }

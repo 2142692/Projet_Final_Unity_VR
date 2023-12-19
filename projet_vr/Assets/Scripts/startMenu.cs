@@ -1,24 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class GoStageThree : MonoBehaviour
+using UnityEngine.UI;
+public class startMenu : MonoBehaviour
 {
     public Animator canvas;
-    private void OnTriggerEnter(Collider other)
+    public void OnPress()
     {
-
-
-        if (other.tag == "nextToThree")
-        {
-            StartCoroutine("chargerNiveau");
-        }
+        StartCoroutine("chargerNiveau");
+            
     }
+
+
     IEnumerator chargerNiveau()
     {
         canvas.SetTrigger("Debut");
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Stage3");
+        SceneManager.LoadScene("Stage1");
         yield break;
     }
+
+  
 }
